@@ -1,8 +1,8 @@
 :root {
-  --primary: #250800;      /* كحلي غامق */
-  --secondary: #13315c;    /* أزرق رسمي */
-  --accent: #f4c430;       /* ذهبي */
-  --background: #f8fafc;   /* أبيض فاتح */
+  --primary: #250800;      
+  --secondary: #13315c;   
+  --accent: #f4c430;      
+  --background: #f8fafc;   
   --surface: #ffffff;
   --text-main: #0f172a;
   --text-muted: #64748b;

@@ -11,17 +11,17 @@ async function loadPage(page) {
 }
 
 function initRouter() {
-  // Load initial page
+
   loadPage('home');
 
-  // Add event listeners to navbar links
+
   document.addEventListener('click', (e) => {
     if (e.target.matches('[data-page]')) {
       e.preventDefault();
       const page = e.target.getAttribute('data-page');
       loadPage(page);
 
-      // Update active class
+    
       document.querySelectorAll('[data-page]').forEach(link => link.classList.remove('active'));
       e.target.classList.add('active');
     }
@@ -43,5 +43,5 @@ fetch('./components/navbar/navbar.html')
   .then(data => {
     document.getElementById('navbar').innerHTML = data;
 
-    initNavbar(); // شغّل الفانكشن بعد الحقن
+    initNavbar(); 
   });
