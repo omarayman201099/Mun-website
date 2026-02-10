@@ -1,3 +1,8 @@
 
 @import url("../components/navbar/navbar.css");
+@import url("../components/footer/footer.css");
 
+main {
+  margin-top: 80px;
+  min-height: calc(100vh - 160px);
+}
