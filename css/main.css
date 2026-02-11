@@ -4,7 +4,6 @@
 @import url("../components/footer/footer.css");
 
 main {
-  margin-top: 80px;
   min-height: calc(100vh - 160px);
 }
 
@@ -14,7 +13,97 @@ main {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
   font-family: "Roboto Mono", monospace;
+
+}
+
+
+body{
+    overflow: hidden;
+
+}
+
+.confrance-content{
+  position: relative;
+  height: 100vh;
+  background-image: url(../asaetiss/background/IMG_20250918_103816.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* طبقة التعتيم */
+.background-shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 8, 0, 0.8);
+  z-index: 1;
+}
+
+/* المحتوى فوق الشادو */
+.content{
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+
+
+.content h1{
+  position: relative;
+  color: #d4c46c;
+  font-size: 48px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+.content h1::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  width: 120px;
+  height: 3px;
+  background-color: #d4c46c;
+}
+
+
+
+
+.content p {
+ font-size: 18px;
+ font-weight: 300;
+ margin-top: 30px;
+
+}
+
+
+
+.content button{
+  background-color: #d4c46c;
+   padding: 15px;
+   border: none;
+   color: aliceblue;
+   border-radius: 15px;
+   font-weight: 900;
+   font-size: 15px;
+   margin-top: 35px;
+   cursor: pointer;
+  transition: .1s;
+
+}
+.content button:hover{
+background-color: #d4c46c50;
 
 }

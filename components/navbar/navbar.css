@@ -4,7 +4,7 @@
   z-index: 999;
   height: 100px;
   background: var(--primary);
-  border-bottom: 1px solid var(--border);
+
 }
 
 .container {
@@ -60,7 +60,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  background-color: aqua;
+
 }
 
 .menu-toggle span {

@@ -45,3 +45,8 @@ fetch('./components/navbar/navbar.html')
 
     initNavbar(); 
   });
+
+
+
+
+  
