@@ -1,0 +1,329 @@
+/* Force light background on body to prevent dark overscroll */
+
+
+.events-section1 {
+    background: #d9d9d9;
+    padding: 36px 0 56px;
+}
+
+.events-page-wrap {
+    width: min(1120px, 94%);
+    margin: 0 auto;
+}
+
+.events-banner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto 26px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--mun-shadow);
+}
+
+.events-banner img {
+    width: 100%;
+    height: clamp(210px, 26vw, 340px);
+    object-fit: cover;
+    display: block;
+}
+
+.events-banner-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 18px;
+    background: linear-gradient(90deg, rgba(7, 11, 20, 0.78) 0%, rgba(7, 11, 20, 0.55) 40%, rgba(7, 11, 20, 0.35) 100%);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 220ms ease, transform 220ms ease;
+    pointer-events: none;
+}
+
+.events-banner:hover .events-banner-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.events-banner-overlay h2 {
+    color: var(--mun-gold);
+    font-size: clamp(1.2rem, 2.6vw, 2rem);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.events-banner-overlay p {
+    color: var(--color-white);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.events-banner-btn {
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    background: var(--mun-gold);
+    color: var(--mun-maroon-2);
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    padding: 12px 22px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    transform: translateY(6px);
+    opacity: 0;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.events-banner:hover .events-banner-btn {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.events-section1-content {
+    max-width: 880px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.events-section1-content h1 {
+    color: #111827;
+    font-size: clamp(1.55rem, 4.2vw, 2.4rem);
+    margin-bottom: 12px;
+    letter-spacing: 0.4px;
+}
+
+.events-section1-content p {
+    color: #3f3f46;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.events-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.event-card {
+    background: #ececec;
+    border-radius: 12px;
+    padding: 10px 10px 10px 12px;
+    display: grid;
+    grid-template-columns: 44% 1fr;
+    gap: 18px;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.event-card.reverse {
+    grid-template-columns: 1fr 44%;
+}
+
+.event-card.reverse .event-card-image {
+    order: 2;
+}
+
+.event-card-image {
+    position: relative;
+}
+
+.event-slider {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.event-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.event-slider img.active {
+    opacity: 1;
+}
+
+.event-card-image img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.event-card-content {
+    padding: 14px 12px 10px 2px;
+}
+
+.event-meta {
+    font-size: 0.72rem;
+    color: #7a7263;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.event-card-content h3 {
+    color: #6a1f1b;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.event-card-content p {
+    color: #4d4d53;
+    line-height: 1.62;
+    font-size: 0.88rem;
+}
+
+.event-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ccb26c;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    letter-spacing: 0.35px;
+    z-index: 4;
+}
+
+.event-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 0;
+    background: #ccb26c;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 3px;
+    z-index: 5;
+}
+
+.event-slider-btn.prev {
+    left: 8px;
+}
+
+.event-slider-btn.next {
+    right: 8px;
+}
+
+.event-slider-index {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(17, 24, 39, 0.7);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 5px 9px;
+    border-radius: 999px;
+    z-index: 4;
+    letter-spacing: 0.3px;
+}
+
+.programs-section {
+    margin-top: 36px;
+    background: #efefef;
+    border-radius: 12px;
+    padding: 28px 18px 22px;
+}
+
+.programs-section h2 {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.programs-section h2::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: var(--mun-gold);
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.program-card {
+    background: #f8f8f8;
+    border: 1px solid #c4c4c4;
+    border-left: 4px solid #7f1d1d;
+    border-radius: 6px;
+    padding: 18px 14px;
+    min-height: 210px;
+}
+
+.program-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #202938;
+}
+
+.program-card p {
+    color: #4b5563;
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .event-card,
+    .event-card.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card.reverse .event-card-image {
+        order: 0;
+    }
+
+    .event-card-image img {
+        height: 220px;
+    }
+
+    .event-card-content {
+        padding: 12px 8px 10px;
+    }
+
+    .event-card-content h3 {
+        font-size: 1.12rem;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+}

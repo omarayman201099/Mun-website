@@ -1,0 +1,24 @@
+.content {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(14, 22, 38, 0.95), rgba(19, 32, 51, 0.8));
+}
+
+.content .container {
+  max-width: 900px;
+}
+
+.content h1 {
+  color: var(--mun-gold);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 14px;
+}
+
+.content p {
+  color: var(--mun-text-muted);
+  font-size: 1.1rem;
+}
